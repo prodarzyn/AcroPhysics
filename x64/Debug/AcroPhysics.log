@@ -1,6 +1,3 @@
-﻿  Main.cpp
-D:\GitHub\AcroPhysics\Main.cpp(7,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  Vec2.cpp
-D:\GitHub\AcroPhysics\Vec2.cpp(108,14): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+﻿  RigidBody2D.cpp
+D:\GitHub\AcroPhysics\src\RigidBody2D.cpp(69,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   AcroPhysics.vcxproj -> D:\GitHub\AcroPhysics\x64\Debug\AcroPhysics.exe

@@ -15,37 +15,43 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="src\RigidBody2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vec2.cpp">
+    <ClCompile Include="src\Vec2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RigidBody2D.cpp">
+    <ClCompile Include="src\PhysicsWorld2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsWorld2D.cpp">
+    <ClCompile Include="src\Math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Clock.cpp">
+    <ClCompile Include="src\CollisionShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vec2.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="src\RigidBody2D.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AcroPhysics.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="src\Vec2.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RigidBody2D.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="src\PhysicsWorld2D.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsWorld2D.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="src\AcroPhysics.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Clock.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="src\Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CollisionShape.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

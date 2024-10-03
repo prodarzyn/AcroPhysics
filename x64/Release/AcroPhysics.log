@@ -1,0 +1,12 @@
+﻿  Clock.cpp
+  PhysicsWorld2D.cpp
+  RigidBody2D.cpp
+  Vec2.cpp
+D:\GitHub\AcroPhysics\src\Vec2.cpp(108,14): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Main.cpp
+D:\GitHub\AcroPhysics\src\Main.cpp(8,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 146 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AcroPhysics.vcxproj -> D:\GitHub\AcroPhysics\x64\Release\AcroPhysics.exe
