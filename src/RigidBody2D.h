@@ -15,8 +15,11 @@ namespace acro {
 		float mass;
 		bool isStatic;
 		float restitution;
+		float friction = 0.999f;
+		bool isInCollision = false;
+		CollisionShape* collisionShape;
 
-		RigidBody2D(Vec2 pos, Vec2 vel, float m,bool isStatic = false, float restitution = 1.0);
+		RigidBody2D(Vec2 pos, Vec2 vel, float m,bool isStatic = false, float restitution = 0.5);
 		RigidBody2D(const RigidBody2D& other);
 		~RigidBody2D();
 		void applyForce(const Vec2& f);
@@ -24,11 +27,8 @@ namespace acro {
 		void update(float deltaTime, const Vec2& gravity);
 		void setCollisionShape(float radius);
 		void setCollisionShape(float width,float height);
-		void checkCollisionWith(RigidBody2D* other);
-		void resolveCollision(RigidBody2D* other);
 
-	private:
-		CollisionShape* collisionShape;
+		
 
 	};
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "RigidBody2D.h"
 #include <vector>
+#include "CollisionHandler.h"
 
 namespace acro {
 	class PhysicsWorld2D

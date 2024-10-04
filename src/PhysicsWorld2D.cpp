@@ -8,15 +8,7 @@ namespace acro {
 
 	void PhysicsWorld2D::update(float deltaTime)
 	{
-		if (bodies.size() >= 2)
-		{
-			for (int i = 1; i < bodies.size(); i++)
-			{
-				
-				bodies[0]->checkCollisionWith(bodies[i]);
-			}
-
-		}
+		CollisionHandler::handleCollision(bodies);
 
 		for (RigidBody2D *body : bodies)
 		{

@@ -2,9 +2,7 @@
 
 namespace acro {
 	void CollisionShape::setPosition(const Vec2& newPosition) {}
-
 	Vec2 CollisionShape::getPosition() const { return Vec2(0,0); }
-
 	float CollisionShape::getRadius() const { return 0; }
 	float CollisionShape::getWidth() const { return 0; }
 	float CollisionShape::getHeight() const { return 0; }
@@ -44,6 +42,22 @@ namespace acro {
 		return false;
 	}
 
+	float CircleShape::getHeight() const
+	{
+		return 0;
+	}
+
+	float CircleShape::getWidth() const
+	{
+		return 0;
+	}
+
+
+
+
+
+
+
 
 
 	RectangleShape::RectangleShape(float posX, float posY, float w, float h) : position(Vec2(posX,posY)), width(w), height(h) {}
@@ -63,6 +77,11 @@ namespace acro {
 		return position;
 	}
 
+	float RectangleShape::getRadius() const
+	{
+		return 0;
+	}
+
 	void RectangleShape::setPosition(const Vec2& newPosition)
 	{
 		position = newPosition;
@@ -73,13 +92,14 @@ namespace acro {
 	{
 		const CircleShape* circle = dynamic_cast<const CircleShape*>(&other);
 		if (circle) {
-			float closestX = Math::clamp(circle->getPosition().x, position.x, position.x + width);
-			float closestY = Math::clamp(circle->getPosition().y, position.y, position.y + height);
+			float closestX = std::max(position.x, std::min(circle->getPosition().x, position.x + width));
+			float closestY = std::max(position.y, std::min(circle->getPosition().y, position.y + height));
 			float dx = circle->getPosition().x - closestX;
 			float dy = circle->getPosition().y - closestY;
+			float radius = circle->getRadius() / 2.0f;
 			return (dx * dx + dy * dy) < (circle->getRadius() * circle->getRadius());
 		}
-
+	
 		const RectangleShape* rectangle = dynamic_cast<const RectangleShape*>(&other);
 		if (rectangle) {
 			return !(position.x + width < rectangle->position.x || position.x > rectangle->position.x + rectangle->width ||

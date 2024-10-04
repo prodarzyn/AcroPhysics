@@ -24,7 +24,7 @@ namespace acro {
 		Vec2 normalize() const;
 		bool operator==(const Vec2& other) const;
 		bool operator!=(const Vec2& other) const;
-		float mangitude() const;
+		float magnitude() const;
 		float dot(const Vec2& other);
 		float angleBetween(const Vec2& other);
 		float distance(const Vec2& other) const;

@@ -1,3 +1,13 @@
-﻿  RigidBody2D.cpp
-D:\GitHub\AcroPhysics\src\RigidBody2D.cpp(69,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  Test.cpp
+D:\GitHub\AcroPhysics\src\PhysicsWorld2D.h(10,25): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\GitHub\AcroPhysics\Test.cpp(84,98): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\GitHub\AcroPhysics\Test.cpp(84,64): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
   AcroPhysics.vcxproj -> D:\GitHub\AcroPhysics\x64\Debug\AcroPhysics.exe

@@ -80,14 +80,14 @@ namespace acro {
 		return Vec2(-x, -y);
 	}
 
-	float Vec2::mangitude() const
+	float Vec2::magnitude() const
 	{
 		return sqrt(x*x + y*y);
 	}
 
 	Vec2 Vec2::normalize() const
 	{
-		float mag = mangitude();
+		float mag = magnitude();
 		return Vec2(x / mag, y / mag);
 	}
 
@@ -99,7 +99,7 @@ namespace acro {
 	float Vec2::angleBetween(const Vec2& other)
 	{
 		float dotProd = dot(other);
-		float mags = mangitude() + other.mangitude();
+		float mags = magnitude() + other.magnitude();
 		return acos(dotProd / mags);
 	}
 

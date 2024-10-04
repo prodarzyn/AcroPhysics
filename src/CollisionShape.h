@@ -1,12 +1,9 @@
 #pragma once
 #include "Vec2.h"
 #include "Math.h"
-
-
+#include <algorithm>
 
 namespace acro {
-
-
 	class CollisionShape
 	{
 	public:
@@ -26,6 +23,8 @@ namespace acro {
 
 		bool checkCollision(const CollisionShape& other) const override;
 		float getRadius() const override;
+		float getWidth() const override;
+		float getHeight() const override;
 		Vec2 getPosition() const override;
 		void setPosition(const Vec2& newPosition) override;
 	private:
@@ -42,13 +41,12 @@ namespace acro {
 		Vec2 getPosition() const override;
 		float getWidth() const override;
 		float getHeight() const override;
+		float getRadius() const override;
 		void setPosition(const Vec2& newPosition) override;
 		
 	private:
 		float width, height;
 		Vec2 position = Vec2(0, 0);
-
-
 	};
 }
 
