@@ -4,16 +4,28 @@
 #include <algorithm>
 
 namespace acro {
+
+
+	enum class ShapeType {
+		CIRCLE = 0,
+		RECTANGLE = 1
+	};
+
+
 	class CollisionShape
 	{
 	public:
-		virtual bool checkCollision(const CollisionShape& other) const = 0;
+		ShapeType type;
 		virtual void setPosition(const Vec2& newPosition);
 		virtual Vec2 getPosition() const;
 		virtual float getRadius() const;
 		virtual float getWidth() const;
 		virtual float getHeight() const;
+	protected:
+		CollisionShape(ShapeType t) : type(t) {}
 	};
+
+
 
 	class CircleShape : public CollisionShape
 	{
@@ -21,7 +33,6 @@ namespace acro {
 
 		CircleShape(float centerX, float centerY, float r);
 
-		bool checkCollision(const CollisionShape& other) const override;
 		float getRadius() const override;
 		float getWidth() const override;
 		float getHeight() const override;
@@ -32,12 +43,13 @@ namespace acro {
 		float radius;
 	};
 
+
+
 	class RectangleShape : public CollisionShape
 	{
 	public:
 
 		RectangleShape(float posX, float posY, float w, float h);
-		bool checkCollision(const CollisionShape& other) const override;
 		Vec2 getPosition() const override;
 		float getWidth() const override;
 		float getHeight() const override;

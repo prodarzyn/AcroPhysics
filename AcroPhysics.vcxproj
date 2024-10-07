@@ -133,9 +133,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\CollisionHandler.cpp" />
+    <ClCompile Include="Test\DebugCircle.cpp" />
+    <ClCompile Include="Test\DebugRect.cpp" />
+    <ClCompile Include="src\Solver.cpp" />
     <ClCompile Include="src\CollisionShape.cpp" />
-    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Test\Test.cpp" />
     <ClCompile Include="src\Math.cpp" />
     <ClCompile Include="src\PhysicsWorld2D.cpp" />
     <ClCompile Include="src\RigidBody2D.cpp" />
@@ -143,7 +145,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AcroPhysics.h" />
-    <ClInclude Include="src\CollisionHandler.h" />
+    <ClInclude Include="src\Material.h" />
+    <ClInclude Include="Test\DebugCircle.h" />
+    <ClInclude Include="Test\DebugRect.h" />
+    <ClInclude Include="src\Solver.h" />
     <ClInclude Include="src\CollisionShape.h" />
     <ClInclude Include="src\Math.h" />
     <ClInclude Include="src\PhysicsWorld2D.h" />

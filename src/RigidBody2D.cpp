@@ -2,13 +2,14 @@
 
 namespace acro {
 	RigidBody2D::RigidBody2D(Vec2 pos, Vec2 vel, float m, bool isStatic,float restitution) : position(pos), velocity(vel), 
-		mass(m), force(0, 0), isStatic(isStatic),restitution(restitution){}
+		mass(m), force(0, 0), isStatic(isStatic),restitution(restitution), rotation(0), rotationalVelocity(0){}
 
 	RigidBody2D::RigidBody2D(const RigidBody2D& other) = default;
 	
 	RigidBody2D::~RigidBody2D()
 	{
 		delete collisionShape;
+		
 	}
 
 	void RigidBody2D::applyForce(const Vec2& f)
@@ -31,19 +32,25 @@ namespace acro {
 		collisionShape = new RectangleShape(position.x, position.y, width,height);
 	}
 
+	ShapeType RigidBody2D:: GetShapeType() const {
+		return collisionShape->type;
+	}
 
-	void RigidBody2D::update(float deltaTime, const Vec2& gravity)
+
+
+	void RigidBody2D::move(const Vec2& displacement)
 	{
-		Vec2 netForce = (!isStatic) ? (gravity * mass) + force : force;
-		Vec2 acceleration = netForce / mass;
-
-		velocity += acceleration * deltaTime;
-		if(isInCollision)
-			velocity = Vec2(friction*velocity.x,velocity.y);
-		position += velocity * deltaTime;
+		position += displacement;
 		if (collisionShape)
 			collisionShape->setPosition(position);
-
-		force = Vec2(0, 0); 
 	}
+
+	void RigidBody2D::moveTo(const Vec2& pos)
+	{
+		position = pos;
+		if (collisionShape)
+			collisionShape->setPosition(position);
+	}
+
+
 }

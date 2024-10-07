@@ -1,7 +1,7 @@
 #pragma once
 #include "RigidBody2D.h"
 #include <vector>
-#include "CollisionHandler.h"
+#include "Solver.h"
 
 namespace acro {
 	class PhysicsWorld2D
@@ -9,9 +9,12 @@ namespace acro {
 	public:
 		Vec2 gravity = Vec2(0,9.8);
 		float timeScale = 10.0f;
-		std::vector<RigidBody2D*> bodies;
 		void addBody(RigidBody2D* body);
-		void update(float deltaTime);
+		void removeBody(RigidBody2D* body);
+		void step(float deltaTime);
+	private:
+		std::vector<RigidBody2D*> bodies;
+
 	};
 
 }

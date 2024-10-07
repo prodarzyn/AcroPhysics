@@ -1,24 +1,38 @@
 #include "Math.h"
 
+
 namespace acro
 {
-	float Math::clamp(float num, float low, float high)
+	float Math::clamp(float value, float min, float max)
 	{
-		if (num <= low)
-			return low;
-		else if (num >= high)
-			return high;
+		if (min == max)
+			return min;
+		if (min > max) throw std::invalid_argument("min is greater than the max");
+		if (max < min) throw std::invalid_argument("max is lesser than the min");
+			
+		if (value <= min)
+			return min;
+		else if (value >= max)
+			return max;
 		else
-			return num;
+			return value;
 	}
 
-	static int clamp(int num, int low, int high)
+	int Math::clamp(int value, int min, int max)
 	{
-		if (num <= low)
-			return low;
-		else if (num >= high)
-			return high;
+		if (min == max)
+			return min;
+		if (min > max) throw std::invalid_argument("min is greater than the max");
+		if (max < min) throw std::invalid_argument("max is lesser than the min");
+
+		if (value <= min)
+			return min;
+		else if (value >= max)
+			return max;
 		else
-			return num;
+			return value;
 	}
+
+
+
 }
