@@ -1,0 +1,57 @@
+# Build artifacts
+*.obj
+*.exe
+*.pch
+*.pdb
+*.ilk
+*.log
+*.dll
+*.lib
+*.out
+*.sdf
+*.ipch
+*.o
+*.a
+*.lo
+*.la
+*.gch
+*.so
+*.dylib
+*.exe
+
+# VS-specific directories
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
+
+# Build directories
+Debug/
+Release/
+x64/Debug/
+x64/Release/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeScripts/
+Makefile
+
+# Temporary files
+*.tmp
+*.log
+*.suo
+*.ncb
+*.user
+*.tlog
+*.lastbuildstate
+
+# Editor config and settings
+.vscode/
+.idea/
+
+# Dependency directories
+Dependencies/
